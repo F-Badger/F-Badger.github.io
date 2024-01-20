@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Footer</title>
+        <link rel="stylesheet" href="footerstyles.css">
+        <script>
+            let highContrast = false;
+            let button;
+            function updateButtonContrast() {
+                button = document.getElementById("high-contrast-btn");
+                if (highContrast) {
+                    button.classList.remove("high-contrast")
+                    button.classList.add("default")
+                    highContrast = false
+                }
+                else {
+                    button.classList.remove("default")
+                    button.classList.add("high-contrast")
+                    highContrast = true
+                }
+            }
+            function toggleHighContrast() {
+                updateButtonContrast()
+                window.parent.postMessage("toggleHighContrast","*")
+            }
+        </script>
+    </head>
+        <main>
+            <nav>
+                <a href="index.html" target="_parent">
+                    Home
+                </a>
+                <a href="index.html" target="_parent">
+                    Learn
+                </a>
+                <a href="index.html" target="_parent">
+                    Practice
+                </a>
+                <a href="index.html" target="_parent">
+                    Feedback
+                </a>
+                <a href="index.html" target="_parent">
+                    Sitemap
+                </a>
+            </nav>
+
+            <div id="btn-container">
+                <button class="default" id="high-contrast-btn" onclick="toggleHighContrast()">Toggle High Contrast</button>
+            </div>
+
+        </main>
+    <body>
+        
+    </body>
+</html>

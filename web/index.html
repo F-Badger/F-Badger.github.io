@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Homepage - </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            let high_contrast = false
+            window.addEventListener('message', 
+            (event) => {
+                if (event.data == "toggleHighContrast") {
+                    toggleHighContrast()
+                }
+            }
+            )
+            function toggleHighContrast() {
+                if (!high_contrast) {
+                    document.body.style.background = "white";
+                    high_contrast = true
+                }
+                else {
+                    document.body.style.background = "linear-gradient(160deg, #5DADE2 0%, #5DADE2 50%, #A9DFBF 50%, #A9DFBF 100%";
+                    high_contrast = false
+                }
+            }
+        </script>
+    </head>
+
+    <header>
+
+        <h1><a href="index.html">Logo/Name</a></h1>
+        <nav>
+            <a href="#">learn</a>
+            <a href="#">practice</a>
+        </nav>
+
+    </header>
+
+    <body>
+
+        <div id="welcome-section">
+            <h2>Welcome Section</h2>
+            <p>Some Text Will Go Here</p>
+        </div>
+
+        <div id="how-to-section">
+            <h2>How-To Section</h2>
+            <p>Some More Text Will Go Here</p>
+        </div>
+
+        <object type="text/html" data="footer.html"></object>
+
+    </body>
+
+</html>
