@@ -17,9 +17,16 @@ body.default {
 }
 
 body.high-contrast {
-    background-color: white;
-    color: black;
+    background-color: black;
     transition: background-color 0.4s ease;
+}
+
+.default-font-colour {
+    color: black;
+}
+
+.high-contrast-font-colour {
+    color: yellow
 }
 
 header {
@@ -30,6 +37,10 @@ header {
 
 a {
     text-decoration: none;
+}
+
+header a {
+    color: inherit;
 }
 
 nav a:hover {
@@ -95,10 +106,6 @@ h1, nav, div {
     header {
         padding: 10px 30px;
     }
-}
-
-header a {
-    color: #333333;
 }
 
 nav {

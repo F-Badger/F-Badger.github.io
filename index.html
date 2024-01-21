@@ -20,18 +20,26 @@
                 if (!high_contrast) {
                     document.body.classList.add("high-contrast")
                     document.body.classList.remove("default")
+                    Array.from(document.getElementsByClassName("default-font-colour")).forEach(element => {
+                        element.classList.remove("default-font-colour");
+                        element.classList.add("high-contrast-font-colour")
+                    })
                     high_contrast = true
                 }
                 else {
                     document.body.classList.add("default")
                     document.body.classList.remove("high-contrast")
+                    Array.from(document.getElementsByClassName("high-contrast-font-colour")).forEach(element => {
+                        element.classList.remove("high-contrast-font-colour");
+                        element.classList.add("default-font-colour")
+                    });
                     high_contrast = false
                 }
             }
         </script>
     </head>
 
-    <header>
+    <header class="default-font-colour">
 
         <h1><a href="index.html">Logo/Name</a></h1>
         <nav>
@@ -41,7 +49,7 @@
 
     </header>
 
-    <body class="default">
+    <body class="default default-font-colour">
 
         <div id="welcome-section">
             <h2>Welcome Section</h2>

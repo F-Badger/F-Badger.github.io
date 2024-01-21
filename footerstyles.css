@@ -51,7 +51,15 @@
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+.default-font-colour {
     color: black;
+}
+
+.high-contrast-font-colour {
+    color: yellow;
 }
 
 a:hover {
@@ -88,17 +96,17 @@ button {
     font-weight: bold;
 }
 
-button.default {
+button/*.default*/ {
     background-color: white;
     color: black;
 }
 
-button.default:hover {
+button/*.default*/:hover {
     cursor: pointer;
     background-color: rgb(228, 222, 222);
     transition: background-color 0.4s ease
 }
-
+/*
 button.high-contrast {
     background-color: black;
     color: white;
@@ -109,4 +117,5 @@ button.high-contrast:hover {
     background-color: rgb(88, 88, 88);
     transition: background-color 0.4s ease;
 }
+#*
 
