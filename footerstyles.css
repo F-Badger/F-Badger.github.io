@@ -28,9 +28,6 @@
         padding: 10px;
         font-size: 15px;
     }
-    nav {
-        margin: 0
-    }
 }
 
 @media only screen and (max-width: 570px) {
@@ -43,7 +40,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        margin: 0;
+        margin: 0 0 0 15px;
         justify-content: flex-start
     }
     button {

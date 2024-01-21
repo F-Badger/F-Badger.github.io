@@ -18,11 +18,13 @@
             )
             function toggleHighContrast() {
                 if (!high_contrast) {
-                    document.body.style.background = "white";
+                    document.body.classList.add("high-contrast")
+                    document.body.classList.remove("default")
                     high_contrast = true
                 }
                 else {
-                    document.body.style.background = "linear-gradient(160deg, #5DADE2 0%, #5DADE2 50%, #A9DFBF 50%, #A9DFBF 100%";
+                    document.body.classList.add("default")
+                    document.body.classList.remove("high-contrast")
                     high_contrast = false
                 }
             }
@@ -39,7 +41,7 @@
 
     </header>
 
-    <body>
+    <body class="default">
 
         <div id="welcome-section">
             <h2>Welcome Section</h2>
