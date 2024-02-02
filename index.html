@@ -7,43 +7,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <script>
-            let high_contrast = false
-            window.addEventListener('message', 
-            (event) => {
-                if (event.data == "toggleHighContrast") {
-                    toggleHighContrast()
-                }
-            }
-            )
-            function toggleHighContrast() {
-                if (!high_contrast) {
-                    document.body.classList.add("high-contrast")
-                    document.body.classList.remove("default")
-                    Array.from(document.getElementsByClassName("default-font-colour")).forEach(element => {
-                        element.classList.remove("default-font-colour");
-                        element.classList.add("high-contrast-font-colour")
-                    })
-                    high_contrast = true
-                }
-                else {
-                    document.body.classList.add("default")
-                    document.body.classList.remove("high-contrast")
-                    Array.from(document.getElementsByClassName("high-contrast-font-colour")).forEach(element => {
-                        element.classList.remove("high-contrast-font-colour");
-                        element.classList.add("default-font-colour")
-                    });
-                    high_contrast = false
-                }
-            }
-        </script>
+        <script src="index_scripts.js"></script>
     </head>
 
     <header class="default-font-colour">
 
         <h1><a href="index.html">Logo/Name</a></h1>
         <nav>
-            <a href="#">learn</a>
+            <a href="learn/home.html">learn</a>
             <a href="#">practice</a>
         </nav>
 

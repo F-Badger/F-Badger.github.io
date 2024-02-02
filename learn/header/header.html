@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="headerstyles.css">
+        <script>
+            let high_contrast = false
+            window.addEventListener('message', 
+            (event) => {
+                if (event.data == "toggleHighContrast") {
+                    toggleHighContrast()
+                }
+            }
+            )
+            function toggleHighContrast() {
+                if (high_contrast) {
+                    document.body.classList.remove("high-contrast-font-colour")
+                    document.body.classList.add("default-font-colour")
+                    high_contrast = false
+                }
+                else {
+                    document.body.classList.remove("default-font-colour")
+                    document.body.classList.add("high-contrast-font-colour")
+                    high_contrast = true
+                }
+            }
+        </script>
+    </head>
+
+    <body class="default-font-colour">
+        <main>
+            <h1><a href="../../index.html" target="_top">Logo/Name</a></h1>
+            <nav>
+                <a>1.1 The characteristics of contemporary processors, input, output and storage devices</a>
+                <a>1.2 Software and software development</a>
+                <a>1.3 Exchanging data</a>
+                <a>1.4 Data types, data structures and algorithms</a>
+                <a>1.5 Legal, moral, cultural and ethical issues</a>
+                <a>Specification map</a>
+            </nav>
+        </main>
+    </body>
+
+</html>

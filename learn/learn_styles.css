@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+body.default {
+    background-color: #5DADE2; 
+    transition: background-color 0.7s ease;
+}
+
+body.high-contrast {
+    background-color: black;
+    transition: background-color 0.7s ease;
+}
+
+.default-font-colour {
+    color: black;
+    transition: color 0.7s ease;
+}
+
+.high-contrast-font-colour {
+    color: yellow;
+    transition: color 0.7s ease
+}
+
+object {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+}
+
+#header {
+    top: 0;
+}
+
+#footer {
+    bottom: 0;
+}
+
