@@ -8,12 +8,7 @@ window.addEventListener('message',
     }
     else if (event.data[0] == "updateiframeHeight") {
         var headeriframe = document.getElementById('header');
-        if (event.data[1] == "increase")  {
-            headeriframe.style.height = '300px'
-        }
-        else if (event.data[1] == "decrease") {
-            headeriframe.style.height = '115px'
-        }
+        headeriframe.style.height = event.data[1]
     }
 }
 )

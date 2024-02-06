@@ -10,7 +10,7 @@
 
 
 @media only screen and (min-width: 1600px) {
-    nav p {
+    #desktop-nav p {
         font-size: 15px;
     }
     .dropdown {
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (min-width: 1300px) and (max-width: 1600px) {
-    nav p {
+    #desktop-nav p {
         font-size: 13px;
     }
     .dropdown {
@@ -28,7 +28,7 @@
 }
 
 @media only screen and (min-width: 1100px) and (max-width: 1300px) {
-    nav p {
+    #desktop-nav p {
         font-size: 11px;
     }
     .dropdown {
@@ -41,7 +41,7 @@
         width: 20%;
         font-size: 40px;
     }
-    nav {
+    #desktop-nav {
         width: 80%;
     }
     .nav-header, .spec-map {
@@ -55,10 +55,10 @@
         width: 15%;
         font-size: 30px;
     }
-    nav {
+    #desktop-nav {
         width: 85%;
     }
-    nav p {
+    #desktop-nav p {
         font-size: 23px;
     }
     .dropdown {
@@ -79,6 +79,9 @@
     .nav-header:hover .dropdown{
         display: block;
     }
+    #mobile-nav, #hamburger {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 680px) {
@@ -87,8 +90,65 @@
         font-size: 30px;
         text-align: center;
     }
-    nav p {
+    #desktop-nav p {
         display: none;
+    }
+    #hamburger.selected::before {
+        transform: rotate(-45deg) translate(-8px, 4px);
+    }
+    
+    #hamburger.selected::after {
+        transform: rotate(45deg) translate(-4px, 2px);
+    }
+    
+    #hamburger.selected .bar {
+        display: none;
+    }
+    #hamburger .bar, #hamburger::before, #hamburger::after {
+        content: "";
+        display: block;
+        background-color: black;
+        width: 100%;
+        height: 5px;
+        margin: 5px 0; 
+    }
+    #hamburger {
+        position: relative;
+        display: block;
+        width: 40px;
+        cursor: pointer;
+        background: none;
+        outline: none;
+        appearance: none;
+        border: none;
+    }
+    
+    #mobile-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        min-height: 100vh; 
+        background-color: rgb(169, 169, 214);
+        z-index: 1; 
+        padding-top: 100px;
+        transition: 0.4s;
+    }
+    
+    #mobile-nav.display {
+        left: 0;
+    }
+    
+    #mobile-nav p {
+        padding: 10px 20px;
+        width: calc(100% - 80px);
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    #mobile-nav p:hover {
+        background-color: rgb(147, 147, 187);;
     }
 }
 
@@ -99,7 +159,7 @@ main {
     padding: 20px
 }
 
-nav {
+#desktop-nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -109,7 +169,7 @@ a {
     text-decoration: none;
 }
 
-nav p {
+#desktop-nav p {
     text-align: center;
     font-weight: bold;
 }
@@ -143,7 +203,7 @@ nav p {
 }
 
 .high-contrast-bg {
-    background-color: transparent;
+    background-color: black;
 }
 
 .dropdown.default-bg a:hover {
@@ -166,3 +226,12 @@ nav p {
 body {
     height: fit-content;
 }
+
+h1, #hamburger {
+    z-index: 2;
+}
+
+
+
+
+

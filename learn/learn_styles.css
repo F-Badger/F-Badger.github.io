@@ -47,6 +47,7 @@ iframe {
     position: absolute;
     overflow: hidden;
     border: none;
+    transition: 0.4s;
 }
 
 #header {
