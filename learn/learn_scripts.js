@@ -1,10 +1,19 @@
 let high_contrast = false
 window.addEventListener('message', 
 (event) => {
-    if (event.data == "toggleHighContrast") {
+    if (event.data[0] == "toggleHighContrast") {
         toggleHighContrast()
-        var headerObject = document.getElementById('header');
-        headerObject.contentWindow.postMessage("toggleHighContrast", "*")
+        var headeriframe = document.getElementById('header');
+        headeriframe.contentWindow.postMessage(["toggleHighContrast"], "*")
+    }
+    else if (event.data[0] == "updateiframeHeight") {
+        var headeriframe = document.getElementById('header');
+        if (event.data[1] == "increase")  {
+            headeriframe.style.height = '300px'
+        }
+        else if (event.data[1] == "decrease") {
+            headeriframe.style.height = '115px'
+        }
     }
 }
 )

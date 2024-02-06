@@ -7,7 +7,7 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
 }
 
 body.default {
@@ -34,6 +34,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding: 20px;
 }
 
 a {
@@ -53,10 +54,7 @@ h1, nav, div {
     font-family: 'Oxygen', sans-serif;
 }
 
-@media only screen and (min-width: 950px){
-    header {
-        padding: 20px 50px;
-    }
+@media only screen and (min-width: 1100px){
     nav a {
         padding: 0 95px;
         font-size: 30px;
@@ -71,11 +69,7 @@ h1, nav, div {
     }
 }
 
-@media only screen and (min-width: 680px) and (max-width: 950px){
-    header {
-        padding: 20px 0 20px 25px;
-    }
-    
+@media only screen and (min-width: 680px) and (max-width: 1100px){
     nav a {
         padding: 0 25px;
         font-size: 30px;
@@ -109,9 +103,6 @@ h1, nav, div {
         padding: 0 25px;
         font-size: 25px;
     }
-    header {
-        padding: 10px 30px;
-    }
 }
 
 nav {
@@ -124,9 +115,10 @@ div {
     min-height: 200px;
 }
 
-object {
+iframe {
     width: 100%;
     height: fit-content;
     position: absolute;
     bottom: 0;
+    border: none;
 }

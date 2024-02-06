@@ -30,7 +30,7 @@
             }
             function toggleHighContrast() {
                 updateButtonContrast()
-                window.parent.postMessage("toggleHighContrast","*")
+                window.parent.postMessage(["toggleHighContrast"],"*")
             }
         </script>
     </head>
@@ -40,7 +40,7 @@
                 <a href="index.html" target="_parent">
                     Home
                 </a>
-                <a href="index.html" target="_parent">
+                <a href="learn/home.html" target="_parent">
                     Learn
                 </a>
                 <a href="index.html" target="_parent">

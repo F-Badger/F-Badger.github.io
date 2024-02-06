@@ -10,20 +10,29 @@
 
 
 @media only screen and (min-width: 1600px) {
-    nav a {
+    nav p {
         font-size: 15px;
     }
-}
-
-@media only screen and (min-width: 1300px) and (max-width: 1600px) {
-    nav a {
+    .dropdown {
         font-size: 13px;
     }
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 1300px) {
-    nav a {
+@media only screen and (min-width: 1300px) and (max-width: 1600px) {
+    nav p {
+        font-size: 13px;
+    }
+    .dropdown {
         font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+    nav p {
+        font-size: 11px;
+    }
+    .dropdown {
+        font-size: 10px;
     }
 }
 
@@ -35,8 +44,9 @@
     nav {
         width: 80%;
     }
-    nav a {
+    .nav-header, .spec-map {
         width: 16%;
+        padding: 2px;
     }
 }
 
@@ -48,14 +58,26 @@
     nav {
         width: 85%;
     }
+    nav p {
+        font-size: 23px;
+    }
+    .dropdown {
+        font-size: 20px;
+    }
     .small-width-hide {
         display: none;
     }
-    .topic {
+    .nav-header {
         width: 12%;
     }
     .spec-map {
         width: 17%;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    .nav-header:hover .dropdown{
+        display: block;
     }
 }
 
@@ -65,7 +87,7 @@
         font-size: 30px;
         text-align: center;
     }
-    nav a {
+    nav p {
         display: none;
     }
 }
@@ -87,8 +109,7 @@ a {
     text-decoration: none;
 }
 
-nav a {
-    text-decoration: none;
+nav p {
     text-align: center;
     font-weight: bold;
 }
@@ -101,4 +122,47 @@ nav a {
 .high-contrast-font-colour {
     color: yellow;
     transition: color 0.7s ease
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px; 
+    text-align: center;
+}
+
+.default-bg {
+    background-color: #f9f9f9;
+}
+
+.high-contrast-bg {
+    background-color: transparent;
+}
+
+.dropdown.default-bg a:hover {
+    background-color: #ecebeb;
+}
+
+.dropdown.high-contrast-bg a:hover {
+    background-color: rgb(29, 28, 28);
+}
+
+.nav-header {
+    position: relative;
+    display: block;
+}
+
+.topic {
+    padding-bottom: 10px;
+}
+
+body {
+    height: fit-content;
 }

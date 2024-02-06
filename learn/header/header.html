@@ -10,38 +10,108 @@
             let high_contrast = false
             window.addEventListener('message', 
             (event) => {
-                if (event.data == "toggleHighContrast") {
+                if (event.data[0] == "toggleHighContrast") {
                     toggleHighContrast()
                 }
             }
             )
+            window.addEventListener('resize', setNavHeaderHeight);
             function toggleHighContrast() {
                 if (high_contrast) {
                     document.body.classList.remove("high-contrast-font-colour")
                     document.body.classList.add("default-font-colour")
+                    document.querySelectorAll(".high-contrast-bg").forEach(element => {
+                        element.classList.remove("high-contrast-bg")
+                        element.classList.add("default-bg")
+                        
+                    }
+                    )
                     high_contrast = false
                 }
                 else {
                     document.body.classList.remove("default-font-colour")
                     document.body.classList.add("high-contrast-font-colour")
+                    document.querySelectorAll(".default-bg").forEach(element => {
+                        element.classList.remove("default-bg")
+                        element.classList.add("high-contrast-bg")
+                        
+                    }
+                    )
                     high_contrast = true
                 }
+            }
+            function setNavHeaderHeight() {
+                if (document.querySelector(".big.topic").offsetHeight == 0) {
+                    return false
+                }
+                var newHeight = document.querySelector(".big.topic").offsetHeight + "px"
+                var topic_headers = document.querySelectorAll(".small.topic")
+                topic_headers.forEach(function(topic) {
+                    topic.style.height = newHeight
+                })
+                document.getElementById("spec-map").style.height = newHeight
+            }
+
+            function updateiframeHeight(change) {
+                window.parent.postMessage(["updateiframeHeight",change],"*")
             }
         </script>
     </head>
 
     <body class="default-font-colour">
         <main>
-            <h1><a href="../../index.html" target="_top">Logo/Name</a></h1>
+            <h1 id="h1"><a href="../../index.html" target="_top">Logo/Name</a></h1>
             <nav>
-                <a class="topic">1.1 <span class="small-width-hide"> The characteristics of contemporary processors, input, output and storage devices </span></a>
-                <a class="topic">1.2 <span class="small-width-hide"> Software and software development </span></a>
-                <a class="topic">1.3 <span class="small-width-hide"> Exchanging data </span></a>
-                <a class="topic">1.4 <span class="small-width-hide"> Data types, data structures and algorithms </span></a>
-                <a class="topic">1.5 <span class="small-width-hide"> Legal, moral, cultural and ethical issues </span></a>
-                <a class="spec-map">Specification map</a>
+                <div class="nav-header" onmouseenter="updateiframeHeight('increase')" onmouseleave="updateiframeHeight('decrease')">
+                    <p class="big topic">1.1<span class="small-width-hide"> The characteristics of contemporary processors, input, output and storage devices</span></p>
+                    <div class="dropdown default-bg">
+                        <a href="#.html" target="_parent">1.1.1<span class="small-width-hide"> Structure and function of the processor</span></a>
+                        <a href="#.html" target="_parent">1.1.2<span class="small-width-hide"> Types of processor</span></a>
+                        <a href="#.html" target="_parent">1.1.3<span class="small-width-hide"> Input, output and storage</span></a>
+                    </div>
+                </div>
+                <div class="nav-header" onmouseenter="updateiframeHeight('increase')" onmouseleave="updateiframeHeight('decrease')">
+                    <p class="small topic">1.2 <span class="small-width-hide">Software and software development</span></p>
+                    <div class="dropdown default-bg">
+                        <a href="#.html" target="_parent">1.2.1 <span class="small-width-hide">Systems Software</span></a>
+                        <a href="#.html" target="_parent">1.2.2 <span class="small-width-hide">Applications Generation</span></a>
+                        <a href="#.html" target="_parent">1.2.3 <span class="small-width-hide">Software Development</span></a>
+                        <a href="#.html" target="_parent">1.2.4 <span class="small-width-hide">Types of Programming Language</span></a>
+                    </div>
+                </div>
+                <div class="nav-header" onmouseenter="updateiframeHeight('increase')" onmouseleave="updateiframeHeight('decrease')">
+                    <p class="small topic">1.3 <span class="small-width-hide">Exchanging data</span></p>
+                    <div class="dropdown default-bg">
+                        <a href="#.html" target="_parent">1.3.1 <span class="small-width-hide">Compression, Encryption and Hashing</span></a>
+                        <a href="#.html" target="_parent">1.3.2 <span class="small-width-hide">Databases</span></a>
+                        <a href="#.html" target="_parent">1.3.3 <span class="small-width-hide">Networks</span></a>
+                        <a href="#.html" target="_parent">1.3.4 <span class="small-width-hide">Web Technologies</span></a>
+                    </div>
+                </div>
+        
+                <div class="nav-header" onmouseenter="updateiframeHeight('increase')" onmouseleave="updateiframeHeight('decrease')">
+                    <p class="small topic">1.4 <span class="small-width-hide">Data types, data structures and algorithms</span></p>
+                    <div class="dropdown default-bg">
+                        <a href="#.html" target="_parent">1.4.1 <span class="small-width-hide">Data Types</span></a>
+                        <a href="#.html" target="_parent">1.4.2 <span class="small-width-hide">Data Structures</span></a>
+                        <a href="#.html" target="_parent">1.4.3 <span class="small-width-hide">Boolean Algebra</span></a>
+                    </div>
+                </div>
+        
+                <div class="nav-header" onmouseenter="updateiframeHeight('increase')" onmouseleave="updateiframeHeight('decrease')">
+                    <p class="small topic">1.5 <span class="small-width-hide">Legal, moral, cultural and ethical issues</span></p>
+                    <div class="dropdown default-bg">
+                        <a href="#.html" target="_parent">1.5.1 <span class="small-width-hide">Computing related legislation</span></a>
+                        <a href="#.html" target="_parent">1.5.2 <span class="small-width-hide">Moral and ethical ssues</span></a>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="#.html" target="_parent"><p id="spec-map">Index <span class="small-width-hide">(Specification Map)</span></p></a>
+                </div>
             </nav>
         </main>
+        <script>setNavHeaderHeight();updateiframeHeight()</script>
     </body>
 
 </html>
