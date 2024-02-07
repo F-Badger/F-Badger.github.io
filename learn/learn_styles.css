@@ -47,14 +47,15 @@ iframe {
     position: absolute;
     overflow: hidden;
     border: none;
-    transition: 0.4s;
 }
 
 #header {
     top: 0;
+    z-index: 2;
 }
 
 #footer {
     bottom: 0;
+    z-index: 1;
 }
 
