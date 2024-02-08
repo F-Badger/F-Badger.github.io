@@ -6,12 +6,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="headerstyles.css">
-        <script>
+        <script defer>
             let high_contrast = false
+            let viewportHeight;
             window.addEventListener('message', 
             (event) => {
                 if (event.data[0] == "toggleHighContrast") {
                     toggleHighContrast()
+                }
+                if (event.data[0] == "updateViewportHeight") {
+                    updateViewportHeight(event.data[1])
                 }
             }
             )
@@ -37,6 +41,7 @@
                 }
             }
             function handleResize() {
+                requestViewportHeight()
                 if (document.querySelector(".big.topic").offsetHeight == 0) {
                     return false
                 }
@@ -55,6 +60,7 @@
                     if (document.getElementById("hamburger").classList.contains("selected")) {
                         document.getElementById("hamburger").classList.remove("selected")
                     }
+                    document.getElementById("pseudo-background").classList.remove("enabled")
                 }
                 resetMobileNav()
                 window.parent.postMessage(["updateBodyHeight","initial"],"*")               
@@ -72,10 +78,17 @@
             function updateiframeHeight(newHeight) {
                 window.parent.postMessage(["updateiframeHeight",newHeight],"*")
             }
+            function requestViewportHeight() {
+                window.parent.postMessage(["requestViewportHeight"],"*")
+            }
+            function updateViewportHeight(newViewportHeight) {
+                viewportHeight = newViewportHeight
+            }
             function hamburgerPress() {
                 resetMobileNav()
                 document.getElementById("hamburger").classList.toggle("selected")
                 document.getElementById("mobile-nav").classList.toggle("display")
+                document.getElementById("pseudo-background").classList.toggle("enabled")
                 if (document.getElementById("mobile-nav").classList.contains("display")) {
                     updateiframeHeight("100vh")  
                 }
@@ -87,9 +100,11 @@
                 }         
             }
             function mobileDropdownTogglePress(dropdownNum) {
+                document.getElementById("mobile-nav").classList.toggle("noMinHeight")
                 document.querySelector(".mobile-dropdown-toggle."+dropdownNum).classList.toggle("selected")
                 document.querySelector(".mobile-dropdown."+dropdownNum).classList.toggle("visible")
-                var newHeight = document.getElementById("mobile-nav").offsetHeight + "px"
+                var navHeight = document.getElementById("mobile-nav").offsetHeight
+                var newHeight = Math.max(navHeight,viewportHeight) + "px"
                 updateiframeHeight(newHeight)
                 window.parent.postMessage(["updateBodyHeight",newHeight],"*")
             }
@@ -153,6 +168,7 @@
                 </button>
 
             </nav>
+            <div id="pseudo-background"></div>
             <nav id="mobile-nav" class="default">
                 <div class="dropdown-container">
                     <div class="dropdown-header">

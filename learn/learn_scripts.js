@@ -1,4 +1,5 @@
 let high_contrast = false
+
 window.addEventListener('message', 
 (event) => {
     if (event.data[0] == "toggleHighContrast") {
@@ -12,6 +13,10 @@ window.addEventListener('message',
     }
     else if (event.data[0] == "updateBodyHeight") {
         document.body.style.height = event.data[1]
+    }
+    else if (event.data[0] == "requestViewportHeight") {
+        var viewportHeight = window.innerHeight
+        document.getElementById('header').contentWindow.postMessage(["updateViewportHeight",viewportHeight],"*")
     }
 }
 )
