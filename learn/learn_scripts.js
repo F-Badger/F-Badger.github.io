@@ -10,6 +10,9 @@ window.addEventListener('message',
         var headeriframe = document.getElementById('header');
         headeriframe.style.height = event.data[1]
     }
+    else if (event.data[0] == "updateBodyHeight") {
+        document.body.style.height = event.data[1]
+    }
 }
 )
 function toggleHighContrast() {

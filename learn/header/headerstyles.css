@@ -139,10 +139,11 @@
         top: 0;
         left: 100%;
         width: 100%;
-        min-height: 100vh; 
+        min-height: 100%;
         z-index: 2; 
         padding-top: 100px;
         transition: 0.4s;
+        padding-bottom: 20px;
     }
 
     #mobile-nav.default {
@@ -168,22 +169,10 @@
         font-size: 15px;
     }
     
-    #mobile-nav.default .dropdown-header:hover {
-        background-color: rgb(147, 147, 187);;
-    }
-
-    #mobile-nav.high-contrast .dropdown-header:hover {
-        background-color: rgb(29, 29, 28);;
-    }
 
     .dropdown-label {
         width: calc(100% - 80px);
     }
-
-    /*.dropdown-container {
-        display: flex;
-        justify-content: space-between;
-    }*/
 
     .mobile-dropdown-toggle {
         position: relative;
