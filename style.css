@@ -11,7 +11,7 @@ body {
 }
 
 body.default {
-    background-color: #5DADE2; 
+    background-color: #73bcec; 
     transition: background-color 0.7s ease;
 }
 
