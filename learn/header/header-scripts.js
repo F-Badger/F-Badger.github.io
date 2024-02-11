@@ -1,4 +1,4 @@
-let high_contrast = false;
+let highContrast = false;
 let viewportHeight;
 const mainWindow = window.parent;
 const specMap = document.getElementById("spec-map");
@@ -21,14 +21,14 @@ window.addEventListener('message',
 window.addEventListener('resize', handleResize);
 
 function toggleHighContrast() {
-    if (high_contrast) {
+    if (highContrast) {
         document.querySelectorAll(".high-contrast").forEach(element => {
             element.classList.remove("high-contrast")
             element.classList.add("default")
             
         }
         )
-        high_contrast = false
+        highContrast = false
     }
     else {
         document.querySelectorAll(".default").forEach(element => {
@@ -37,7 +37,7 @@ function toggleHighContrast() {
             
         }
         )
-        high_contrast = true
+        highContrast = true
     }
 }
 
@@ -47,8 +47,8 @@ function handleResize() {
         return false
     }
     var newHeight = document.querySelector(".big.topic").offsetHeight + "px"
-    var topic_headers = document.querySelectorAll(".small.topic")
-    topic_headers.forEach(function(topic) {
+    Array.from(document.querySelectorAll(".small.topic")).forEach(
+        topic => {
         topic.style.height = newHeight
     })
     specMap.style.height = newHeight
@@ -99,8 +99,11 @@ function hamburgerPress() {
     else {
         setTimeout(() => updateiframeHeight("110px"),400)
     }
+    if (hamburgerMenu.classList.contains("selected")) {
+        mainWindow.postMessage(["hamburgerMenuOpened"],"*")
+    }
     if (!(hamburgerMenu.classList.contains("selected"))) {
-        mainWindow.postMessage(["updateBodyHeight","initial"],"*")
+        mainWindow.postMessage(["hamburgerMenuClosed","initial"],"*")
     }         
 }
 
