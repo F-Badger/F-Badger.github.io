@@ -17,7 +17,7 @@ body {
 }
 
 main {
-    padding: 120px 20px 25px;
+    padding: 120px 20px 0;
     font-family: 'Catamaran', sans-serif;
 }
 
@@ -104,4 +104,13 @@ table.default th, table.default td {
 
 table.high-contrast th, table.high-contrast td {
     border: 1px solid yellow;
+}
+
+table th {
+    background-color: #62a9d8;
+    transition: background-color 0.7s ease;
+}
+
+table.high-contrast th {
+    background-color: rgb(36, 35, 35);
 }
