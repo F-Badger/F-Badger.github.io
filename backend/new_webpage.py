@@ -164,6 +164,7 @@ createPageButton = tk.Button(
 
 createPageButton.pack(
     side=tk.LEFT,
+    anchor=tk.NW,
 
     #10px of padding
     padx = 10,
