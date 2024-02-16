@@ -7,18 +7,18 @@ def isSelfContained(question):
     response = client.chat.completions.create(
       model="ft:gpt-3.5-turbo-1106:personal::8sjXfJaw",
       messages=[
-        {"role": "system", "content": "Determine if the following question is self-contained, explaining your response in one sentance."},
+        {"role": "system", "content": "Determine if the following question can be answered fully without additional clarifications"},
         {"role": "user", "content": f"Question:  {question}"},
       ],
-      max_tokens = 60,
-      temperature = 0
+      max_tokens = 1,
+      temperature = 0,
     )
     return response
 
-question = "Identify three inputs that will be required to configure the initial conditions for running the simulation."
+question = "Describe what is meant by recursion"
 
 response = isSelfContained(question)
 
 print (response.choices[0].message.content)
-cost = (response.usage.prompt_tokens / 1000) * 0.0015 + (response.usage.completion_tokens / 1000) * 0.002
+cost = (response.usage.prompt_tokens / 1000) * 0.003 + (response.usage.completion_tokens / 1000) * 0.006
 print (f"\nCost: ${cost}")
