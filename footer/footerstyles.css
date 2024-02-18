@@ -98,26 +98,18 @@ button {
     font-weight: bold;
 }
 
-button/*.default*/ {
+button {
     background-color: white;
     color: black;
 }
 
-button/*.default*/:hover {
+button:hover {
     cursor: pointer;
     background-color: rgb(228, 222, 222);
     transition: background-color 0.4s ease
 }
-/*
-button.high-contrast {
-    background-color: black;
-    color: white;
-}
 
-button.high-contrast:hover {
-    cursor: pointer;
-    background-color: rgb(88, 88, 88);
-    transition: background-color 0.4s ease;
+a[href="../unfinished-page.html"]:hover {
+    cursor: not-allowed;
 }
-#*
 

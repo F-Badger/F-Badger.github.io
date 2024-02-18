@@ -340,7 +340,9 @@ a {
     padding-bottom: 10px;
 }
 
-
+a[href="../unfinished-page.html"]:hover {
+    cursor: not-allowed;
+}
 
 
 
