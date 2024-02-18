@@ -17,7 +17,7 @@ window.addEventListener('message',
         setTimeout(() => mainSection.classList.add("hide"),400)
     }
     else if (message == "hamburgerMenuClosed") {
-        document.body.style.height = event.data[1]
+        document.body.style.height = "intial"
         mainSection.classList.remove("hide")
     }
     else if (message == "requestViewportHeight") {

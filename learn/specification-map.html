@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Specification Map</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="specification-map-styles.css">
+        <script src="learn-scripts.js" defer></script>
+    </head>
+
+    <body class="default">
+
+        <header>
+            <iframe id="header" scrolling="no" src="header/header.html"></iframe>
+        </header>
+
+        <main class="default">
+
+            <table id="table1" class="default">
+                <tr>
+                    <th>1.1. The characteristics of contemporary processors, input, output and storage devices</th>
+                    <th>1.2. Software and software development</th>
+                    <th>1.3. Exchanging data</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.1.1 Structure and function of the processor</p>
+                        <ol type="a">
+                            <li><a href="1.1/1.1.1.html#structure-of-the-processor">The Arithmetic and Logic Unit; ALU, Control Unit and Registers (Program Counter; PC, Accumulator; ACC, Memory Address Register; MAR, Memory DataRegister; MDR, Current Instruction Register; CIR). Buses: data, address and control: how this relates to assembly language programs.</a></li>
+                            <li><a href="1.1/1.1.1.html#fetch-decode-execute">The Fetch-Decode-Execute Cycle; including its effects on registers.</a></li>
+                            <li><a href="1.1/1.1.1.html#factors-affecting-cpu-performance">The factors affecting the performance of the CPU: clock speed, number of cores, cache.</a></li>
+                            <li><a href="1.1/1.1.1.html#pipelining">The use of pipelining in a processor to improve efficiency.</a></li>
+                            <li><a href="1.1/1.1.1.html#processor-architecture">Von Neumann, Harvard and contemporary processor architecture.</a></li>
+                        </ol>
+                        <p>1.1.2 Types of processor</p>
+                        <ol type="a">
+                            <li><a href="#">The differences between and uses of CISC and RISC processors.</a></li>
+                            <li><a href="#">GPUs and their uses (including those not related to graphics).</a></li>
+                            <li><a href="#">Multicore and Parallel systems.</a></li>
+                        </ol>
+                        <p>1.1.3 Input, output and storage</p>
+                        <ol type="a">
+                            <li><a href="#">How different input, output and storage devices can be applied to the solution of different problems.</a></li>
+                            <li><a href="#">The uses of magnetic, flash and optical storage devices.</a></li>
+                            <li><a href="#">RAM and ROM.</a></li>
+                            <li><a href="#">Virtual storage.</a></li>
+                        </ol>
+                    </td>
+                    <td>
+                        <p>1.2.1 Systems Software</p>
+                        <ol type="a">
+                            <li><a href="#">The need for, function and purpose of operating systems.</a></li>
+                            <li><a href="#">Memory Management (paging, segmentation and virtual memory).</a></li>
+                            <li><a href="#">Interrupts, the role of interrupts and Interrupt Service Routines (ISR), role within the Fetch-Decode-Execute Cycle.</a></li>
+                            <li><a href="#">Scheduling: round robin, first come first served, multi-level feedback queues, shortest job first and shortest remaining time.</a></li>
+                            <li><a href="#">Distributed, embedded, multi-tasking, multi-user and Real Time operating systems.</a></li>
+                            <li><a href="#">BIOS.</a></li>
+                            <li><a href="#">Device drivers.</a></li>
+                            <li><a href="#">Virtual machines, any instance where software is used to take on the function of a machine,  including executing intermediate code or running an operating system within another.</a></li>
+                        </ol>
+                        <p>1.2.2 Applications Generation</p>
+                        <ol type="a">
+                            <li><a href="#">The nature of applications, justifying suitable applications for a specific purpose.</a></li>
+                            <li><a href="#">Utilities.</a></li>
+                            <li><a href="#">Open source vs closed source.</a></li>
+                            <li><a href="#">Translators:Interpreters, compilers and assemblers.</a></li>
+                            <li><a href="#">Stages of compilation (lexical analysis, syntax analysis, code generation and optimisation).</a></li>
+                            <li><a href="#">Linkers and loaders and use of libraries.</a></li>
+                        </ol>
+                        <p>1.2.3 Software Development</p>
+                        <ol type="a">
+                            <li><a href="#">Understand the waterfall lifecycle, agile methodologies, extreme programming, the spiral model and rapid application development.</a></li>
+                            <li><a href="#">The relative merits and drawbacks of different methodologies and when they might be used.</a></li>
+                            <li><a href="#">Writing and following algorithms.</a></li>
+                        </ol>
+                        <p>1.2.4 Types of Programming Language</p>
+                        <ol type="a">
+                            <li><a href="#">Need for and characteristics of a variety of programming paradigms.</a></li>
+                            <li><a href="#">Procedural languages.</a></li>
+                            <li><a href="#">Assembly language (including following and writing simple programs with the Little Man Computer instruction set).</a></li>
+                            <li><a href="#">Modes of addressing memory (immediate, direct, indirect and indexed).</a></li>
+                            <li><a href="#">Object-oriented languages with an understanding of classes, objects, methods, attributes, inheritance, encapsulation and polymorphism.</a></li>
+                        </ol>
+                    </td>
+                    <td>
+                        <p>1.3.1 Compression, Encryption and Hashing</p>
+                        <ol type="a">
+                            <li><a href="#">Lossy vs Lossless compression.</a></li>
+                            <li><a href="#">Run length encoding and dictionary coding for lossless compression.</a></li>
+                            <li><a href="#">Symmetric and asymmetric encryption.</a></li>
+                            <li><a href="#">Different uses of hashing.</a></li>
+                        </ol>
+                        <p>1.3.2 Databases</p>
+                        <ol type="a">
+                            <li><a href="#">Relational database, flat file, primary key, foreign key, secondary key, entity relationship modelling, normalisation and indexing.</a></li>
+                            <li><a href="#">Methods of capturing, selecting, managing and exchanging data.</a></li>
+                            <li><a href="#">Normalisation to 3NF.</a></li>
+                            <li><a href="#">SQL - Interpret and modify.</a></li>
+                            <li><a href="#">Referential integrity.</a></li>
+                            <li><a href="#">Transaction processing, ACID (Atomicity, Consistency, Isolation, Durability), record locking and redundancy.</a></li>
+                        </ol>
+                        <p>1.3.3 Networks</p>
+                        <ol type="a">
+                            <li><a href="#">Characteristics of networks and the importance of protocols and standards.</a></li>
+                            <li><a href="#">The internet structure:
+                                <ul>
+                                    <li>The TCP/IP Stack.</li>
+                                    <li>DNS</li>
+                                    <li>Protocol layering.</li>
+                                    <li>LANs and WANs.</li>
+                                    <li>Packet and circuit switching.</li>
+                                </ul>
+                                </a></li>
+                            <li><a href="#">Network security and threats, use of firewalls, proxies and encryption.</a></li>
+                            <li><a href="#">Network hardware.</a></li>
+                            <li><a href="#">Client-server and peer to peer.</a></li>
+                        </ol>
+                        <p>1.3.4 Web Technologies</p>
+                        <ol type="a">
+                            <li><a href="#">HTML, CSS and JavaScript.</a></li>
+                            <li><a href="#">Search engine indexing.</a></li>
+                            <li><a href="#">PageRank algorithm.</a></li>
+                            <li><a href="#">Server and client side processing.</a></li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+            <table id="table2" class="default">
+                <tr>
+                    <th>1.4 Data types, data structures and algorithms</th>
+                    <th>1.5 Legal, moral, cultural and ethical issues</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.4.1 Data Types</p>
+                        <ol type="a">
+                            <li><a href="#">Primitive data types, integer, real/floating point, character, string and Boolean.</a></li>
+                            <li><a href="#">Represent positive integers in binary.</a></li>
+                            <li><a href="#">Use of sign and magnitude and two's complement to represent negative numbers in binary.</a></li>
+                            <li><a href="#">Addition and subtraction of binary integers.</a></li>
+                            <li><a href="#">Represent positive integers in hexadecimal.</a></li>
+                            <li><a href="#">Convert positive integers between binary hexadecimal and denary.</a></li>
+                            <li><a href="#">Representation and normalisation of floating point numbers in binary.</a></li>
+                            <li><a href="#">Floating point arithmetic, positive and negative numbers, addition and subtraction.</a></li>
+                            <li><a href="#">Bitwise manipulation and masks: shifts, combining with AND, OR, and XOR.</a></li>
+                            <li><a href="#">How character sets (ASCII and UNICODE) are used to represent text.</a></li>
+                        </ol>
+                        <p>1.4.2 Data Structures</p>
+                        <ol type="a">
+                            <li><a href="#">Arrays (of up to 3 dimensions), records, lists, tuples.</a></li>
+                            <li><a href="#">The following structures to store data: linked-list, graph (directed and undirected), stack, queue, tree, binary search tree, hash table.</a></li>
+                            <li><a href="#">How to create, traverse, add data to and remove data from the data structures mentioned above.</a></li>
+                        </ol>
+                        <p>1.4.3 Boolean Algebra</p>
+                        <ol type="a">
+                            <li><a href="#">Define problems using Boolean logic.</a></li>
+                            <li><a href="#">Manipulate Boolean expressions, including the use of Karnaugh maps to simplify Boolean expressions.</a></li>
+                            <li><a href="#">Use the following rules to derive or simplify statements in Boolean algebra: De Morgan's Laws, distribution, association, commutation, double negation.</a></li>
+                            <li><a href="#">Using logic gate diagrams and truth tables.</a></li>
+                            <li><a href="#">The logic associated with D type flip flops, half and full adders.</a></li>
+                        </ol>
+                    </td>
+                    <td>
+                        <p>1.5.1 Computing related legislation</p>
+                        <ol type="a">
+                            <li><a href="#">The Data Protection Act 1998.</a></li>
+                            <li><a href="#">The Computer Misuse Act 1990.</a></li>
+                            <li><a href="#">The Copyright Design and Patents Act 1988.</a></li>
+                            <li><a href="#">The Regulation of Investigatory Powers Act 2000.</a></li>
+                        </ol>
+                        <p>1.5.2 Moral and ethical Issues</p>
+                        <ul type="none">
+                            <li><a href="#">The individual moral, social, ethical and cultural opportunities and risks of digital technology:
+                            <ul>
+                                <li>Computers in the workforce.</li>
+                                <li>Automated decision making.</li>
+                                <li>Environmental effects.</li>
+                                <li>Censorship and the Internet.</li>
+                                <li>Monitor behaviour.</li>
+                                <li>Analyse personal information.</li>
+                                <li>Piracy and offensive communications.</li>
+                                <li>Layout, colour paradigms and character sets.</li>
+                            </ul>
+                            </a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <table id="mobile-table" class="default">
+                <tr>
+                    <th>1.1. The characteristics of contemporary processors, input, output and storage devices</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.1.1 Structure and function of the processor</p>
+                        <ol type="a">
+                            <li><a href="1.1/1.1.1.html#structure-of-the-processor">The Arithmetic and Logic Unit; ALU, Control Unit and Registers (Program Counter; PC, Accumulator; ACC, Memory Address Register; MAR, Memory DataRegister; MDR, Current Instruction Register; CIR). Buses: data, address and control: how this relates to assembly language programs.</a></li>
+                            <li><a href="1.1/1.1.1.html#fetch-decode-execute">The Fetch-Decode-Execute Cycle; including its effects on registers.</a></li>
+                            <li><a href="1.1/1.1.1.html#factors-affecting-cpu-performance">The factors affecting the performance of the CPU: clock speed, number of cores, cache.</a></li>
+                            <li><a href="1.1/1.1.1.html#pipelining">The use of pipelining in a processor to improve efficiency.</a></li>
+                            <li><a href="1.1/1.1.1.html#processor-architecture">Von Neumann, Harvard and contemporary processor architecture.</a></li>
+                        </ol>
+                        <p>1.1.2 Types of processor</p>
+                        <ol type="a">
+                            <li><a href="#">The differences between and uses of CISC and RISC processors.</a></li>
+                            <li><a href="#">GPUs and their uses (including those not related to graphics).</a></li>
+                            <li><a href="#">Multicore and Parallel systems.</a></li>
+                        </ol>
+                        <p>1.1.3 Input, output and storage</p>
+                        <ol type="a">
+                            <li><a href="#">How different input, output and storage devices can be applied to the solution of different problems.</a></li>
+                            <li><a href="#">The uses of magnetic, flash and optical storage devices.</a></li>
+                            <li><a href="#">RAM and ROM.</a></li>
+                            <li><a href="#">Virtual storage.</a></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th>1.2. Software and software development</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.2.1 Systems Software</p>
+                        <ol type="a">
+                            <li><a href="#">The need for, function and purpose of operating systems.</a></li>
+                            <li><a href="#">Memory Management (paging, segmentation and virtual memory).</a></li>
+                            <li><a href="#">Interrupts, the role of interrupts and Interrupt Service Routines (ISR), role within the Fetch-Decode-Execute Cycle.</a></li>
+                            <li><a href="#">Scheduling: round robin, first come first served, multi-level feedback queues, shortest job first and shortest remaining time.</a></li>
+                            <li><a href="#">Distributed, embedded, multi-tasking, multi-user and Real Time operating systems.</a></li>
+                            <li><a href="#">BIOS.</a></li>
+                            <li><a href="#">Device drivers.</a></li>
+                            <li><a href="#">Virtual machines, any instance where software is used to take on the function of a machine,  including executing intermediate code or running an operating system within another.</a></li>
+                        </ol>
+                        <p>1.2.2 Applications Generation</p>
+                        <ol type="a">
+                            <li><a href="#">The nature of applications, justifying suitable applications for a specific purpose.</a></li>
+                            <li><a href="#">Utilities.</a></li>
+                            <li><a href="#">Open source vs closed source.</a></li>
+                            <li><a href="#">Translators:Interpreters, compilers and assemblers.</a></li>
+                            <li><a href="#">Stages of compilation (lexical analysis, syntax analysis, code generation and optimisation).</a></li>
+                            <li><a href="#">Linkers and loaders and use of libraries.</a></li>
+                        </ol>
+                        <p>1.2.3 Software Development</p>
+                        <ol type="a">
+                            <li><a href="#">Understand the waterfall lifecycle, agile methodologies, extreme programming, the spiral model and rapid application development.</a></li>
+                            <li><a href="#">The relative merits and drawbacks of different methodologies and when they might be used.</a></li>
+                            <li><a href="#">Writing and following algorithms.</a></li>
+                        </ol>
+                        <p>1.2.4 Types of Programming Language</p>
+                        <ol type="a">
+                            <li><a href="#">Need for and characteristics of a variety of programming paradigms.</a></li>
+                            <li><a href="#">Procedural languages.</a></li>
+                            <li><a href="#">Assembly language (including following and writing simple programs with the Little Man Computer instruction set).</a></li>
+                            <li><a href="#">Modes of addressing memory (immediate, direct, indirect and indexed).</a></li>
+                            <li><a href="#">Object-oriented languages with an understanding of classes, objects, methods, attributes, inheritance, encapsulation and polymorphism.</a></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th>1.3. Exchanging data</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.3.1 Compression, Encryption and Hashing</p>
+                        <ol type="a">
+                            <li><a href="#">Lossy vs Lossless compression.</a></li>
+                            <li><a href="#">Run length encoding and dictionary coding for lossless compression.</a></li>
+                            <li><a href="#">Symmetric and asymmetric encryption.</a></li>
+                            <li><a href="#">Different uses of hashing.</a></li>
+                        </ol>
+                        <p>1.3.2 Databases</p>
+                        <ol type="a">
+                            <li><a href="#">Relational database, flat file, primary key, foreign key, secondary key, entity relationship modelling, normalisation and indexing.</a></li>
+                            <li><a href="#">Methods of capturing, selecting, managing and exchanging data.</a></li>
+                            <li><a href="#">Normalisation to 3NF.</a></li>
+                            <li><a href="#">SQL - Interpret and modify.</a></li>
+                            <li><a href="#">Referential integrity.</a></li>
+                            <li><a href="#">Transaction processing, ACID (Atomicity, Consistency, Isolation, Durability), record locking and redundancy.</a></li>
+                        </ol>
+                        <p>1.3.3 Networks</p>
+                        <ol type="a">
+                            <li><a href="#">Characteristics of networks and the importance of protocols and standards.</a></li>
+                            <li><a href="#">The internet structure:
+                                <ul>
+                                    <li>The TCP/IP Stack.</li>
+                                    <li>DNS</li>
+                                    <li>Protocol layering.</li>
+                                    <li>LANs and WANs.</li>
+                                    <li>Packet and circuit switching.</li>
+                                </ul>
+                                </a></li>
+                            <li><a href="#">Network security and threats, use of firewalls, proxies and encryption.</a></li>
+                            <li><a href="#">Network hardware.</a></li>
+                            <li><a href="#">Client-server and peer to peer.</a></li>
+                        </ol>
+                        <p>1.3.4 Web Technologies</p>
+                        <ol type="a">
+                            <li><a href="#">HTML, CSS and JavaScript.</a></li>
+                            <li><a href="#">Search engine indexing.</a></li>
+                            <li><a href="#">PageRank algorithm.</a></li>
+                            <li><a href="#">Server and client side processing.</a></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th>1.4 Data types, data structures and algorithms</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.4.1 Data Types</p>
+                        <ol type="a">
+                            <li><a href="#">Primitive data types, integer, real/floating point, character, string and Boolean.</a></li>
+                            <li><a href="#">Represent positive integers in binary.</a></li>
+                            <li><a href="#">Use of sign and magnitude and two's complement to represent negative numbers in binary.</a></li>
+                            <li><a href="#">Addition and subtraction of binary integers.</a></li>
+                            <li><a href="#">Represent positive integers in hexadecimal.</a></li>
+                            <li><a href="#">Convert positive integers between binary hexadecimal and denary.</a></li>
+                            <li><a href="#">Representation and normalisation of floating point numbers in binary.</a></li>
+                            <li><a href="#">Floating point arithmetic, positive and negative numbers, addition and subtraction.</a></li>
+                            <li><a href="#">Bitwise manipulation and masks: shifts, combining with AND, OR, and XOR.</a></li>
+                            <li><a href="#">How character sets (ASCII and UNICODE) are used to represent text.</a></li>
+                        </ol>
+                        <p>1.4.2 Data Structures</p>
+                        <ol type="a">
+                            <li><a href="#">Arrays (of up to 3 dimensions), records, lists, tuples.</a></li>
+                            <li><a href="#">The following structures to store data: linked-list, graph (directed and undirected), stack, queue, tree, binary search tree, hash table.</a></li>
+                            <li><a href="#">How to create, traverse, add data to and remove data from the data structures mentioned above.</a></li>
+                        </ol>
+                        <p>1.4.3 Boolean Algebra</p>
+                        <ol type="a">
+                            <li><a href="#">Define problems using Boolean logic.</a></li>
+                            <li><a href="#">Manipulate Boolean expressions, including the use of Karnaugh maps to simplify Boolean expressions.</a></li>
+                            <li><a href="#">Use the following rules to derive or simplify statements in Boolean algebra: De Morgan's Laws, distribution, association, commutation, double negation.</a></li>
+                            <li><a href="#">Using logic gate diagrams and truth tables.</a></li>
+                            <li><a href="#">The logic associated with D type flip flops, half and full adders.</a></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th>1.5 Legal, moral, cultural and ethical issues</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>1.5.1 Computing related legislation</p>
+                        <ol type="a">
+                            <li><a href="#">The Data Protection Act 1998.</a></li>
+                            <li><a href="#">The Computer Misuse Act 1990.</a></li>
+                            <li><a href="#">The Copyright Design and Patents Act 1988.</a></li>
+                            <li><a href="#">The Regulation of Investigatory Powers Act 2000.</a></li>
+                        </ol>
+                        <p>1.5.2 Moral and ethical Issues</p>
+                        <ul type="none">
+                            <li><a href="#">The individual moral, social, ethical and cultural opportunities and risks of digital technology:
+                            <ul>
+                                <li>Computers in the workforce.</li>
+                                <li>Automated decision making.</li>
+                                <li>Environmental effects.</li>
+                                <li>Censorship and the Internet.</li>
+                                <li>Monitor behaviour.</li>
+                                <li>Analyse personal information.</li>
+                                <li>Piracy and offensive communications.</li>
+                                <li>Layout, colour paradigms and character sets.</li>
+                            </ul>
+                            </a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+        </main>
+
+        <iframe id="footer" src="../footer/footer.html"></iframe>
+        
+    </body>
+
+</html>

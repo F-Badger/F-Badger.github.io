@@ -159,7 +159,7 @@
         left: 0;
     }
     
-    .dropdown-header {
+    .dropdown-header, #mobile-spec-map {
         display: flex;
         justify-content: space-between;
         width: 100%;

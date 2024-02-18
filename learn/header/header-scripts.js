@@ -57,6 +57,7 @@ function handleResize() {
         if (mobileNav.classList.contains("display")) {
             mobileNav.classList.remove("display")
             updateiframeHeight("110px")
+            mainWindow.postMessage(["hamburgerMenuClosed"],"*")
         }
         if (hamburgerMenu.classList.contains("selected")) {
             hamburgerMenu.classList.remove("selected")
@@ -103,7 +104,7 @@ function hamburgerPress() {
         mainWindow.postMessage(["hamburgerMenuOpened"],"*")
     }
     if (!(hamburgerMenu.classList.contains("selected"))) {
-        mainWindow.postMessage(["hamburgerMenuClosed","initial"],"*")
+        mainWindow.postMessage(["hamburgerMenuClosed"],"*")
     }         
 }
 

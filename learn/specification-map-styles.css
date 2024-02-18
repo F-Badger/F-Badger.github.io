@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 680px) {
+    #table1 th {
+        width: 33%;
+    }
+    #table2 th {
+        width: 50%;
+    }
+    #mobile-table {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #header {
+        height: 110px;
+    }
+    #table1, #table2 {
+        display: none;
+    }
+    #mobile-table {
+        display: block;
+    }
+}
+
+body {
+    width: 100%;
+}
+
+main {
+    padding: 120px 40px 0;
+    font-family: 'Catamaran', sans-serif;
+}
+
+main.hide {
+    display: none;
+}
+
+body.default {
+    background-color: #73bcec; 
+    transition: background-color 0.7s ease;
+}
+
+body.high-contrast {
+    background-color: black;
+    transition: background-color 0.7s ease;
+}
+
+main.default {
+    color: black;
+    transition: color 0.7s ease;
+}
+
+main.high-contrast {
+    color: yellow;
+    transition: color 0.7s ease
+}
+
+iframe {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    overflow: hidden;
+    border: none;
+}
+
+#header {
+    top: 0;
+    z-index: 2;
+}
+
+#footer {
+    bottom: 0;
+    z-index: 1;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: top;
+}
+
+#table1, #table2 {
+    width: 100%;
+}
+
+#table1 {
+    margin-bottom: 10px;
+}
+
+td, th {
+    padding: 10px 15px;
+}
+
+table a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table ol, table ul {
+    margin-left: 30px;
+}
+
+th {
+    font-size: 18px;
+}
+
+td p {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+td ol {
+    font-size: 16px;
+}
+
+table.default td, table.default th {
+    border: 1px solid black;
+}
+
+table.high-contrast td, table.high-contrast th {
+    border: 1px solid yellow;
+}
+
+table.default th {
+    background-color: #62a9d8;
+}
+
+table.high-contrast th {
+    background-color: rgb(36, 35, 35);
+}
+
+table.default a:hover {
+    color: rgb(99, 96, 96);
+}
+
+table.high-contrast a:hover {
+    color: rgb(248, 248, 156);
+}
+
+table a[href="#"]:hover {
+    cursor: not-allowed;
+}
