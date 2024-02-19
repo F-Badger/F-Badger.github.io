@@ -112,7 +112,7 @@
         margin: 5px 0; 
     }
 
-    #hamburger.default .bar, #hamburger.default::before, #hamburger.default::after {
+    #hamburger .bar, #hamburger::before, #hamburger::after {
         background-color: black;
         transition: 0.4s;
     }
@@ -145,7 +145,7 @@
         padding-bottom: 20px;
     }
 
-    #mobile-nav.default {
+    #mobile-nav {
         background-color: rgb(169, 169, 214);
         color: rgb(29, 29, 29);
     }
@@ -197,7 +197,7 @@
     .mobile-dropdown-toggle:before {
         transform: rotate(45deg) translate(-4px,8px);
     }
-    .mobile-dropdown-toggle.default .bar, .mobile-dropdown-toggle.default:before {
+    .mobile-dropdown-toggle .bar, .mobile-dropdown-toggle:before {
         background-color: black;
     }
     .mobile-dropdown-toggle.high-contrast .bar, .mobile-dropdown-toggle.high-contrast:before {
@@ -229,7 +229,7 @@
         font-size: 13px;
     }
 
-    .mobile-dropdown.default a {
+    .mobile-dropdown a {
         background-color: rgb(177, 177, 214);
     }
 
@@ -252,7 +252,7 @@
         background-color: rgb(169, 169, 214);
         transition: 0.4s;
     }
-    #pseudo-background.default {
+    #pseudo-background {
         background-color: rgb(169, 169, 214);
     }
     #pseudo-background.high-contrast {
