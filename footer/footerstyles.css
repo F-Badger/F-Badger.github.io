@@ -54,12 +54,12 @@ a {
     color: inherit;
 }
 
-.default-font-colour {
+#navbar {
     color: black;
     transition: color 0.7s ease;
 }
 
-.high-contrast-font-colour {
+#navbar.high-contrast {
     color: yellow;
     transition: color 0.7s ease;
 }

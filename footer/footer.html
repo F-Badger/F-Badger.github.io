@@ -5,38 +5,19 @@
         <title>Footer</title>
         <link rel="stylesheet" href="footerstyles.css">
         <script>
-            let highContrast = false;
-            let button;
-            function updateButtonContrast() {
-                button = document.getElementById("high-contrast-btn");
-                if (highContrast) {
-                    button.classList.remove("high-contrast")
-                    button.classList.add("default")
-                    Array.from(document.getElementsByClassName("high-contrast-font-colour")).forEach(element => {
-                        element.classList.remove("high-contrast-font-colour");
-                        element.classList.add("default-font-colour")
-                    });
-                    highContrast = false
-                }
-                else {
-                    button.classList.remove("default")
-                    button.classList.add("high-contrast")
-                    Array.from(document.getElementsByClassName("default-font-colour")).forEach(element => {
-                        element.classList.remove("default-font-colour");
-                        element.classList.add("high-contrast-font-colour")
-                    })
-                    highContrast = true
-                }
-            }
             function toggleHighContrast() {
-                updateButtonContrast()
+
+                //change colour of links in footer by toggling .high-contrast for #navbar
+                document.getElementById("navbar").classList.toggle("high-contrast")
+
+                //post message to main window to make it enable high contrast
                 window.parent.postMessage(["toggleHighContrast"],"*")
             }
         </script>
     </head>
     <body>
         <main>
-            <nav class="default-font-colour">
+            <nav id="navbar">
                 <a href="../index.html" target="_parent">
                     Home
                 </a>
@@ -55,7 +36,7 @@
             </nav>
 
             <div id="btn-container">
-                <button class="default" id="high-contrast-btn" onclick="toggleHighContrast()">Toggle High Contrast</button>
+                <button onclick="toggleHighContrast()">Toggle High Contrast</button>
             </div>
 
         </main>

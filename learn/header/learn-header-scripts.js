@@ -1,4 +1,3 @@
-let highContrast = false;
 let viewportHeight;
 const mainWindow = window.parent;
 const specMap = document.getElementById("spec-map");
@@ -21,24 +20,9 @@ window.addEventListener('message',
 window.addEventListener('resize', handleResize);
 
 function toggleHighContrast() {
-    if (highContrast) {
-        document.querySelectorAll(".high-contrast").forEach(element => {
-            element.classList.remove("high-contrast")
-            element.classList.add("default")
-            
-        }
-        )
-        highContrast = false
-    }
-    else {
-        document.querySelectorAll(".default").forEach(element => {
-            element.classList.remove("default")
-            element.classList.add("high-contrast")
-            
-        }
-        )
-        highContrast = true
-    }
+    
+    //update font colour of all items in header
+    document.querySelector("main").classList.toggle("high-contrast")
 }
 
 function handleResize() {

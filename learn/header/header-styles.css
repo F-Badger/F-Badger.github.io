@@ -268,7 +268,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px
+    padding: 20px;
+    color: black;
+    transition: color 0.7s ease;
 }
 
 #desktop-nav {
@@ -291,12 +293,7 @@ a {
     text-underline-offset: 2px;
 }
 
-.default {
-    color: black;
-    transition: color 0.7s ease;
-}
-
-.high-contrast {
+main.high-contrast {
     color: yellow;
     transition: color 0.7s ease
 }
@@ -305,7 +302,6 @@ a {
     display: none;
     position: absolute;
     width: 100%;
-    background-color: #f9f9f9;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -315,19 +311,19 @@ a {
     text-align: center;
 }
 
-.droppown.default {
+main .dropdown {
     background-color: #f9f9f9;
 }
 
-.dropdown.high-contrast {
+main.high-contrast .dropdown {
     background-color: rgb(36, 35, 35);
 }
 
-.dropdown.default a:hover {
+main .dropdown a:hover {
     background-color: #ecebeb;
 }
 
-.dropdown.high-contrast a:hover {
+main.high-contrast .dropdown a:hover {
     background-color: rgb(29, 28, 28);
 }
 

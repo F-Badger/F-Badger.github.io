@@ -1,4 +1,3 @@
-let highContrast = false
 const headerIframe = document.getElementById("header")
 const mainSection = document.querySelector("main")
 const footerIframe = document.getElementById("footer")
@@ -8,7 +7,6 @@ window.addEventListener('message',
     var message = event.data[0]
     if (message == "toggleHighContrast") {
         toggleHighContrast()
-        headerIframe.contentWindow.postMessage(["toggleHighContrast"], "*")
     }
     else if (message == "updateiframeHeight") {
         headerIframe.style.height = event.data[1]
@@ -28,24 +26,16 @@ window.addEventListener('message',
 )
 
 function toggleHighContrast() {
-    if (highContrast) {
-        Array.from(document.querySelectorAll(".high-contrast")).forEach (
-            element => {
-                element.classList.remove("high-contrast");
-                element.classList.add("default")
-            }
-        )
-        highContrast = false
-    }
-    else {
-        Array.from(document.querySelectorAll(".default")).forEach (
-            element => {
-                element.classList.remove("default");
-                element.classList.add("high-contrast")
-            }
-        )
-        highContrast = true
-    }
+
+    //update page background background
+    document.body.classList.toggle("high-contrast")
+
+    //update font colour of main section and header
+    document.querySelector("main").classList.toggle("high-contrast")
+
+    //post message to header iframe to make it enable high contrast
+    //the headerIframe is defined as a constant at the start of the file
+    headerIframe.contentWindow.postMessage(["toggleHighContrast"], "*")
 }
 
 function setFooterPosition() {

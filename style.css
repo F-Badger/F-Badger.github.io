@@ -10,7 +10,7 @@ body {
     width: 100%;
 }
 
-body.default {
+body {
     background-color: #73bcec; 
     transition: background-color 0.7s ease;
 }
@@ -20,12 +20,12 @@ body.high-contrast {
     transition: background-color 0.7s ease;
 }
 
-.default-font-colour {
+main, header{
     color: black;
     transition: color 0.7s ease;
 }
 
-.high-contrast-font-colour {
+main.high-contrast, header.high-contrast {
     color: yellow;
     transition: color 0.7s ease
 }

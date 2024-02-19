@@ -25,7 +25,7 @@ main.hide {
     display: none;
 }
 
-body.default {
+body {
     background-color: #73bcec; 
     transition: background-color 0.7s ease;
 }
@@ -35,7 +35,7 @@ body.high-contrast {
     transition: background-color 0.7s ease;
 }
 
-main.default {
+main {
     color: black;
     transition: color 0.7s ease;
 }
@@ -111,6 +111,6 @@ table th {
     transition: background-color 0.7s ease;
 }
 
-table.high-contrast th {
+main.high-contrast table th {
     background-color: rgb(36, 35, 35);
 }
