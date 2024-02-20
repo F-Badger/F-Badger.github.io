@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../learn-styles.css">
+        <script src="../learn-scripts.js" defer></script>
+    </head>
+
+    <body>
+
+        <header>
+            <iframe id="header" scrolling="no" src="../header/header.html"></iframe>
+        </header>
+
+        <main>
+
+            <h2>1.1.2 Type of processor</h2>
+
+            <div id="cisc-risc">
+                <div class="list-container">
+                    <p>There are two main approaches to the architecture of processor:</p>
+                    <ul>
+                        <li><b>Reduced Instruction Set Computers</b> (<b>RISC</b>)</li>
+                        <ul>
+                            <li>These processors use simple instructions, which can be executed within a single clock cycle</li>
+                        </ul>
+                        <li><b>Complex Instruction Set Computers</b> (<b>CISC</b>)</li>
+                        <ul>
+                            <li>These processors have a much larger instruction set (the set of instructions which a CPU is able to decode) than RISC processors, allowing more tasks to be accomplished by as few lines of assembly code as possible. However, as these instructions are more complex, they may take multiple FDE cycles to execute.</li>
+                        </ul>    
+                    </ul>
+                    <table>
+                        <tr>
+                            <th>RISC Processors</th>
+                            <th>CISC Processors</th>
+                        </tr>
+                        <tr>
+                            <td>All instructions executed within a single clock cycle</td>
+                            <td>Includes complex instructions which take many clock cycles</td>
+                        </tr>
+                        <tr>
+                            <td>Smaller instruction set means less transistors are needed, reducing required power and reducing costs to build</td>
+                            <td>Larger instruction set means more transistors are needed, increasing required power and increasing costs to build</td>
+                        </tr>
+                        <tr>
+                            <td>As instructions usually take a single clock cycle, pipelining can be used to increase processor efficiency</td>
+                            <td>As instructions may take multiple clock cycles, pipelining can't  be used to increase processor efficiency</td>
+                        </tr>
+                        <tr>
+                            <td>More memory required to store programs</td>
+                            <td>Less memory required to store programs</td>
+                        </tr>
+                        <tr>
+                            <td>Harder for programmers to write programs for (in assembly language), as more instructions need to be written and its assembly language isn't very similar to a high level language</td>
+                            <td>Easier for programmers to write programs for (in assembly language), as fewer instructions need to be written and its assembly language is closer to a high level language</td>
+                        </tr>
+                        <tr>
+                            <td>Compiler needs to do more work to translate high level code into machine code (as code needs to be broken down into very simple instructions)</td>
+                            <td>Compiler needs to do less work to translate high level code into machine code (as code can be broken down into more complex instructions)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="gpus">
+                <div class="list-container">
+                    <p><b>Graphics Processing Units</b> (<b>GPUs</b>) are specialised electronic circuits, which are very efficient in manipulating computer graphics and image-processing. GPUs:</p>
+                    <ul>
+                        <li>have a <b>specialist instruction set</b>, which is specifically designed for the types of calculation that are required in graphics processing</li>
+                        <li>consist of thousands of <b>smaller</b>, <b>more efficient</b> cores, which work in parallel</li>
+                        <li>utilise <b>Single Instruction, Multiple Data</b> (<b>SIMD</b>) processing, where the same actions are applied to multiple pieces of data (e.g rotating a shape may require performing the same mathematical function on all vertices).</li>
+                    </ul>
+                    <p>These features mean that it is more efficient at displaying graphics than a CPU, which is a general purpose processor. The GPU is a form of co-processor, and may be used by the CPU to compute sections of a program, while the rest of the sequential code (which the GPU can't run) is run by the CPU. resulting in improved performance for the user.</p>
+                    <p>Due to their specialist capabilities, GPUs also have many uses outside of graphics processing, such as modelling physical systems, audio processing, cracking passwords and machine learning among many others.</p>
+                </div>
+            </div>
+
+            <div id="multicore-parallel">
+                <p>
+                    A <b>parallel system</b> is a system where multiple independent processors are used simultaneously to work on the same program, which significantly improves the performance. The process is divided into smaller subtasks, which  can then be processed by any of the processors. This is coordinated by the operating system. Parallel processing can be achieved through different methods - through using multiple processors in a computer or by distributing tasks across multiple cores in a CPU or GPU (such as SIMD processing). 
+                </p>
+                <table>
+                    <tr>
+                        <th>Advantages of Parallel Processing</th>
+                        <th>Disadvantages of Parallel Processing</th>
+                    </tr>
+                    <tr>
+                        <td>Faster than a single processor when handling high volumes of data which require the same processing</td>
+                        <td>Not all programs can use parallel processing, like when one part of the program requires another to have been processed</td>
+                    </tr>
+                    <tr>
+                        <td>Usually allow programs to be executed more quickly</td>
+                        <td>May cost more as more processing blocks required</td>
+                    </tr>
+                    <tr>
+                        <td>Allows for multiple programs to be used simultaneously</td>
+                        <td>Harder to write software to use parallel processing</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>A more complex OS is required to manage processors</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Higher energy consumption</td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </main>
+
+        <iframe id="footer" src="../../footer/footer.html"></iframe>
+        
+    </body>
+
+</html>
