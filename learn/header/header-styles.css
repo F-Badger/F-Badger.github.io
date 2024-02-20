@@ -37,9 +37,11 @@
 }
 
 @media only screen and (min-width: 1100px) {
-    h1 {
+    #logo {
         width: 20%;
-        font-size: 40px;
+    }
+    img {
+        width: 250px;
     }
     #desktop-nav {
         width: 80%;
@@ -51,9 +53,11 @@
 }
 
 @media only screen and (min-width: 680px) and (max-width: 1100px) {
-    h1 {
+    #logo {
         width: 15%;
-        font-size: 30px;
+    }
+    img {
+        width: 200px;
     }
     #desktop-nav {
         width: 85%;
@@ -85,10 +89,12 @@
 }
 
 @media only screen and (max-width: 680px) {
-    h1 {
+    #logo {
         width: 100%;
-        font-size: 30px;
         text-align: center;
+    }
+    img {
+        width: 200px;
     }
     #desktop-nav p {
         display: none;
@@ -218,7 +224,7 @@
     .mobile-dropdown-toggle {
     z-index: 3;
     }
-    h1, #hamburger {
+    #logo, #hamburger {
         z-index:4;
     }
     .mobile-dropdown a {
@@ -339,6 +345,5 @@ main.high-contrast .dropdown a:hover {
 a[href="../unfinished-page.html"]:hover {
     cursor: not-allowed;
 }
-
 
 

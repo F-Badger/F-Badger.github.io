@@ -1,7 +1,7 @@
 let viewportHeight;
 const mainWindow = window.parent;
 const specMap = document.getElementById("spec-map");
-const title = document.getElementById("h1");
+const logo = document.getElementById("logo");
 const mobileNav = document.getElementById("mobile-nav");
 const hamburgerMenu = document.getElementById("hamburger");
 const pseudoBackground = document.getElementById("pseudo-background");
@@ -36,7 +36,6 @@ function handleResize() {
         topic.style.height = newHeight
     })
     specMap.style.height = newHeight
-    title.style.height = newHeight
     if (window.innerWidth > 680) {
         if (mobileNav.classList.contains("display")) {
             mobileNav.classList.remove("display")

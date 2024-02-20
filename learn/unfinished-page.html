@@ -20,24 +20,11 @@
         <main class="default">
             <p style="font-size: 25px;">This page is being worked on. It will be done soon <span style="font-size: 8px;">maybe</span></p>
 
-            <img style="width: 40%; margin: auto; display: block;" src="https://i.imgur.com/2o2zN3T.png">
+            <img style="width: 40%; margin: auto; display: block; min-width: 400px; max-height: calc(100vh - 350px); object-fit: contain;" src="under-construction.png">
 
         </main>
 
         <iframe id="footer" src="../footer/footer.html"></iframe>
-
-        <script>
-            const footer = document.getElementById("footer")
-            window.addEventListener("resize",handleResize)
-            function handleResize() {
-                if (document.body.offsetHeight + footerIframe.offsetHeight > window.innerHeight) {
-                    footer.style.position = "relative"
-                }
-                else {
-                    footer.style.position = "absolute"
-                }
-            }
-        </script>
         
     </body>        
 
