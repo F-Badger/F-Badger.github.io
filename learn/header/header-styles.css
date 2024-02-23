@@ -161,7 +161,7 @@
         color: yellow;
     }
     
-    #mobile-nav.display {
+    #mobile-nav.display, #pseudo-background.display {
         left: 0;
     }
     
@@ -263,10 +263,6 @@
     }
     main.high-contrast #pseudo-background {
         background-color: rgb(36, 35, 35);
-    }
-
-    #pseudo-background.enabled {
-        left: 0;
     }
 }
 
