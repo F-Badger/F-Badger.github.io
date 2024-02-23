@@ -9,6 +9,8 @@ window.addEventListener('message',
         toggleHighContrast()
     }
     else if (message == "updateiframeHeight") {
+
+        //update the height of the iframe to the height passed in the event data 
         headerIframe.style.height = event.data[1]
     }
 

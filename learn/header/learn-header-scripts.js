@@ -1,6 +1,6 @@
 let viewportHeight;
 const mainWindow = window.parent;
-const specMap = document.getElementById("spec-map");
+const specMapNav = document.getElementById("spec-map");
 const logo = document.getElementById("logo");
 const mobileNav = document.getElementById("mobile-nav");
 const hamburgerMenu = document.getElementById("hamburger");
@@ -12,7 +12,6 @@ window.addEventListener('message',
             toggleHighContrast()
         }
         if (event.data[0] == "updateViewportHeight") {
-            console.log("rec")
             updateViewportHeight(event.data[1])
         }
     }
@@ -27,26 +26,28 @@ function toggleHighContrast() {
 }
 
 function handleResize() {
-    if (document.querySelector(".big.topic").offsetHeight == 0) {
-        return false
-    }
-    var newHeight = document.querySelector(".big.topic").offsetHeight + "px"
-    Array.from(document.querySelectorAll(".small.topic")).forEach(
-        topic => {
-        topic.style.height = newHeight
-    })
-    specMap.style.height = newHeight
+    
+
     if (window.innerWidth > 680) {
-        if (mobileNav.classList.contains("display")) {
+        var newHeight = document.querySelector(".first.topic").offsetHeight + "px"
+        Array.from(document.querySelectorAll(".other.topic")).forEach(
+        topic => {
+            topic.style.height = newHeight
+        })
+        specMapNav.style.height = newHeight
+
+        if (hamburgerMenu.classList.contains("selected")) {
+            hamburgerMenu.classList.remove("selected")
             mobileNav.classList.remove("display")
+            pseudoBackground.classList.remove("display")
+            resetMobileNav()  
             updateiframeHeight("110px")
             mainWindow.postMessage(["hamburgerMenuClosed"],"*")
         }
-        hamburgerMenu.classList.remove("selected")
-        pseudoBackground.classList.remove("display")
+
+        
     }
-    resetMobileNav()
-    mainWindow.postMessage(["updateBodyHeight","initial"],"*")               
+              
 }
 
 function resetMobileNav() {
@@ -65,15 +66,12 @@ function resetMobileNav() {
 }  
 
 function updateiframeHeight(newHeight) {
+    //send message to parent window to update height of iframe to newHeight
     mainWindow.postMessage(["updateiframeHeight",newHeight],"*")
 }
 
 function updateViewportHeight(newViewportHeight) {
     viewportHeight = newViewportHeight
-}
-
-function requestViewportHeight() {
-    mainWindow.postMessage(["requestViewportHeight"],"*")
 }
 
 function hamburgerPress() {
