@@ -27,27 +27,36 @@ function toggleHighContrast() {
 
 function handleResize() {
     
-
+    //changes are only needed if the window has been resized to a width greater than the small screen breakpoint (680px)
     if (window.innerWidth > 680) {
+
+        //get the height of the first topic header (1.1.1) as this will always be the biggest topic header (as it has the longest name)
         var newHeight = document.querySelector(".first.topic").offsetHeight + "px"
+
+        //set the height of all the other topic header and the specification map header to the same size as the first topic header
+        //this ensures all dropdowns are shown at the same height, and that all headers are lined up with each other
         Array.from(document.querySelectorAll(".other.topic")).forEach(
         topic => {
             topic.style.height = newHeight
         })
         specMapNav.style.height = newHeight
 
+        //if the mobile hamburger menu was open when the window to resized beyond the small screen breakpoint (so should no longer show)
         if (hamburgerMenu.classList.contains("selected")) {
+
+            //return all elements of the hamburger menu to their default, unopened state
             hamburgerMenu.classList.remove("selected")
             mobileNav.classList.remove("display")
             pseudoBackground.classList.remove("display")
             resetMobileNav()  
+
+            //send message to main window to reduce the size of the iframe (it would previously have been the entire screen)
             updateiframeHeight("110px")
+
+            //send message to main window to run the procedures that would run normally to handle the hamburger menu closing
             mainWindow.postMessage(["hamburgerMenuClosed"],"*")
         }
-
-        
-    }
-              
+    }     
 }
 
 function resetMobileNav() {
