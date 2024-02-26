@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+@media only screen and (min-width: 680px) {
+    #header {
+        height: 130px;
+    }
+    main {
+        padding: 130px 20px 0;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #header {
+        height: 160px;
+    }
+    main {
+        padding: 160px 20px 0;
+    }
+}
+
+body {
+    background-color: #73bcec; 
+    transition: background-color 0.7s ease;
+}
+
+body.high-contrast {
+    background-color: black;
+    transition: background-color 0.7s ease;
+}
+
+main {
+    color: black;
+    transition: color 0.7s ease;
+}
+
+main.high-contrast {
+    color: yellow;
+    transition: color 0.7s ease
+}
+
+iframe {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    overflow: hidden;
+    border: none;
+}
+
+#footer {
+    bottom: 0;
+}
