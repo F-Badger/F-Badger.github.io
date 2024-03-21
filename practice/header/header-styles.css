@@ -8,7 +8,7 @@
 
 @media only screen and (min-width: 1100px){
     a {
-        padding: 0 95px;
+        padding-right: 95px;
         font-size: 30px;
     }
     #logo {
@@ -25,7 +25,7 @@
 
 @media only screen and (min-width: 680px) and (max-width: 1100px){
     a {
-        padding: 0 25px;
+        padding-right: 25px;
         font-size: 22px;
     }
     #logo {
@@ -80,7 +80,7 @@
 main {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 20px;
     font-family: 'Oxygen', sans-serif;
     color: black;
