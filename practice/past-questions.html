@@ -6,9 +6,10 @@
         <title>Past Questions</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="practice-styles.css">
+        <link rel="stylesheet" href="past-questions-styles.css">
         <link rel="icon" href="../favicon.ico" />
         <script src="practice-scripts.js" defer></script>
+        <script src="past-questions-scripts.js" defer></script>
     </head>
 
     <body>
@@ -18,6 +19,56 @@
         </header>
 
         <main>
+            
+            <p style="text-align: center; font-size: 30px; padding: 20px;">Note: This page is currently not functional</p>
+            
+            <p id="topicPrompt">Select the topics which you would like to retrieve questions for:</p>
+            <div id="optionsContainer">
+                <div class="checkboxContainer">
+                    <label class="topicHeader"><input type="checkbox" name="1.1">The characteristics of contemporary processors, input, output and storage devices</label>
+                    <div class="subtopicContainer">
+                        <label><input type="checkbox" name="1.1.1">Structure and function of the processor</label>
+                        <label><input type="checkbox" name="1.1.2">Types of processor</label>
+                        <label><input type="checkbox" name="1.1.3">Input, output and storage</label>
+                    </div>
+                </div>
+                <div class="checkboxContainer">
+                    <label class="topicHeader"><input type="checkbox" name="1.2">Software and software development</label>
+                    <div class="subtopicContainer">
+                        <label><input type="checkbox" name="1.2.1">Systems Software</label>
+                        <label><input type="checkbox" name="1.2.2">Applications Generation</label>
+                        <label><input type="checkbox" name="1.2.3">Software Development</label>
+                        <label><input type="checkbox" name="1.2.4">Types of Programming Language</label>
+                    </div>
+                </div>
+                <div class="checkboxContainer">
+                    <label class="topicHeader"><input type="checkbox" name="1.3">Exchanging data</label>
+                    <div class="subtopicContainer">
+                        <label><input type="checkbox" name="1.3.1">Compression, Encryption and Hashing</label>
+                        <label><input type="checkbox" name="1.3.2">Databases</label>
+                        <label><input type="checkbox" name="1.3.3">Networks</label>
+                        <label><input type="checkbox" name="1.3.4">Web Technologies</label>
+                    </div>
+                </div>
+                <div class="checkboxContainer">
+                    <label class="topicHeader"><input type="checkbox" name="1.4">Data types, data structures and algorithms</label>
+                    <div class="subtopicContainer">
+                        <label><input type="checkbox" name="1.4.1">Data Types</label>
+                        <label><input type="checkbox" name="1.4.2">Data Structures</label>
+                        <label><input type="checkbox" name="1.4.3">Boolean Algebra</label>
+                    </div>
+                </div>
+                <div class="checkboxContainer">
+                    <label class="topicHeader"><input type="checkbox" name="1.5">Legal, moral, cultural and ethical issues</label>
+                    <div class="subtopicContainer">
+                        <label><input type="checkbox" name="1.5.1">Computing related legislation</label>
+                        <label><input type="checkbox" name="1.5.2">Moral and ethical issues</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="retrievalButton" onclick="retrieveQuestions()">Retrieve Questions</button>
+
         </main>
 
         <iframe id="footer" src="../footer/footer.html"></iframe>

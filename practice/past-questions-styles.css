@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+@media only screen and (min-width: 680px) {
+    #header {
+        height: 130px;
+    }
+    main {
+        padding: 130px 20px 0;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #header {
+        height: 160px;
+    }
+    main {
+        padding: 160px 20px 0;
+    }
+}
+
+body {
+    background-color: #73bcec; 
+    transition: background-color 0.7s ease;
+}
+
+body.high-contrast {
+    background-color: black;
+    transition: background-color 0.7s ease;
+}
+
+main {
+    color: black;
+    transition: color 0.7s ease;
+}
+
+main.high-contrast {
+    color: yellow;
+    transition: color 0.7s ease
+}
+
+iframe {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    overflow: hidden;
+    border: none;
+}
+
+#footer {
+    bottom: 0;
+}
+
+#retrievalButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+#retrievalButton:hover, label:hover {
+    cursor: pointer;
+}
+
+#retrievalButton:hover {
+    background-color: rgb(228, 222, 222);
+    transition: background-color 0.4s ease
+}
+
+#topicPrompt {
+    font-size: 20px;
+}
+
+#optionsContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.checkboxContainer {
+    padding: 0 18px 30px
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 8px;
+}
+
+label {
+    display: flex;
+    align-items: baseline;
+    padding: 5px 0;
+    user-select: none;
+}
+
+.topicHeader {
+    font-weight: bold;
+}
+
+.subtopicContainer {
+    padding: 5px 0 0 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .checkboxContainer {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 680px) and (max-width: 1000px) {
+    .checkboxContainer {
+        width: 33.3%;
+    }
+}
