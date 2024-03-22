@@ -3,13 +3,13 @@
 <html lang="en">
 
     <head>
-        <title>Past Questions</title>
+        <title>Generate Questions</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="past-questions-styles.css">
+        <link rel="stylesheet" href="generate-questions-styles.css">
         <link rel="icon" href="../favicon.ico" />
         <script src="practice-scripts.js" defer></script>
-        <script src="past-questions-scripts.js" defer></script>
+        <script src="generate-questions-scripts.js" defer></script>
     </head>
 
     <body>
@@ -19,10 +19,8 @@
         </header>
 
         <main>
-
-            <p style="font-size: 25px; text-align: center;">NOTE: THIS PAGE IS NOT CURRENTLY FUNCTIONAL</p>
             
-            <p id="topicPrompt">Select the topics which you would like to retrieve questions for:</p>
+            <p id="topicPrompt">Select the topics which you would like to generate questions for:</p>
             <div id="optionsContainer">
                 <div class="checkboxContainer">
                     <label class="topicHeader"><input type="checkbox" name="1.1">The characteristics of contemporary processors, input, output and storage devices</label>
@@ -67,7 +65,7 @@
                 </div>
             </div>
             
-            <button id="retrievalButton" onclick="retrieveQuestions()">Retrieve Questions</button>
+            <button id="retrievalButton" onclick="generateQuestions()">Generate Questions</button>
 
         </main>
 
