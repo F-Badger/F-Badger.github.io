@@ -121,6 +121,7 @@ button {
     border: none;
     border-radius: 5px;
     background-color: #0075ff;
+    color: white;
 }
 
 button:hover {
