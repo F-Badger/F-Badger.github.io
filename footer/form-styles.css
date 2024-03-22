@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    padding: 20px
+}
+
+@media only screen and (min-width: 1100px) {
+    img {
+        width: 250px;
+    }
+
+}
+
+@media only screen and (min-width: 680px) and (max-width: 1100px) {
+    img {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #logo {
+        width: 100%;
+        text-align: center;
+    }
+    img {
+        width: 200px;
+    }
+}
+
+body {
+    background-color: #73bcec; 
+    transition: background-color 0.7s ease;
+}
+
+body.high-contrast {
+    background-color: black;
+    transition: background-color 0.7s ease;
+}
+
+main {
+    color: black;
+    transition: color 0.7s ease;
+    margin: 10px 20px
+}
+
+main.high-contrast {
+    color: yellow;
+    transition: color 0.7s ease
+}
+
+h2, main > p {
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    overflow: hidden;
+    border: none;
+}
+
+form {
+    margin: 10px;
+    padding: 15px;
+}
+
+#form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form label {
+    display: block;
+    padding: 2px;
+}
+
+.questionContainer {
+    margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    margin: 0 8px;
+}
+
+input[type="range"] {
+    width: 300px;
+    margin: 0 8px;
+}
+
+input[type="number"] {
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+.sliderQuestion {
+    margin-bottom: 10px;
+}
+
+textarea {
+    padding: 5px;
+}
+
+button {
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(228, 222, 222);
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
