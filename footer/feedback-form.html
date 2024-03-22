@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Feedback Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="form-styles.css">
+        <link rel="icon" href="../favicon.ico">
+        <script src="form-scripts.js" defer></script>
+    </head>
+
+    <body>
+
+        <header>
+            <a id="logo" href="../index.html" target="_top"><img src="../logo.png"></a>
+        </header>
+
+        <main>
+
+
+            <h2>Feedback Form</h2>
+
+            <p>Thank you for taking the time to fill out this feedback form.</p>
+
+            <div id="form-container">
+
+                <form>
+                    <div class="questionContainer">
+                        <p>Which of the following sections of the website did you use?</p>
+                        <label><input type="radio" name="sectionsUsed" value="learn" required>Learn</label>
+                        <label><input type="radio" name="sectionsUsed" value="practice" required>Practice</label>
+                        <label><input type="radio" name="sectionsUsed" value="both" required>Both Learn and Practice</label>
+                    </div>
+
+                    <div id="learnQuestions" class="hidden">
+                        <div class="questionContainer">
+                            <p>How would you describe the level of detail of the notes in the learn section?</p>
+                            <label><input type="radio" name="detailLevel" required>Too detailed</label>
+                            <label><input type="radio" name="detailLevel" required>Just the right level of detail</label>
+                            <label><input type="radio" name="detailLevel" required>Too little detail</label>
+                        </div>
+
+                        <div class="questionContainer">
+                            <p>Do you have any feedback about the content of the notes in the learn section?. (optional)
+                            </p>
+                            <textarea id="learnFeedback" rows="4" cols="55"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="practiceQuestions" class="hidden">
+                        <div class="questionContainer">
+                            <p>Did you use the 'past questions' part of the practice section?</p>
+                            <label><input type="radio" name="usedPastQuestionsSection" value="yes" required>Yes</label>
+                            <label><input type="radio" name="usedPastQuestionsSection" value="no" required>No</label>
+                        </div>
+
+                        <div id="pastQuestionsSectionQuestions" class="hidden">
+                            <div class="questionContainer">
+                                <p>
+                                    How easy was it to retrieve questions on the topics you wanted?<br>
+                                    (1 is very hard, 5 is very easy)
+                                </p>
+                                <input type="range" name="questionRetrievalRatingSlider" min="1" max="5" value="" 
+                                        oninput="this.form.questionRetrievalRatingNumber.value=this.value" required/>
+                                <input type="number" id="questionRetrievalRating" name="questionRetrievalRatingNumber" min="1" max="5" value="" 
+                                        oninput="this.form.questionRetrievalRatingSlider.value=this.value" required/>
+                            </div>
+                        </div>
+
+                        <div class="questionContainer">
+                            <p>Did you use the 'generate questions' part of the practice section?</p>
+                            <label><input type="radio" name="usedGenerateQuestionsSection" value="yes" required>Yes</label>
+                            <label><input type="radio" name="usedGenerateQuestionsSection" value="no" required>No</label>
+                        </div>
+
+                        <div id="generateSectionQuestions" class="hidden">
+                            <div class="questionContainer">
+                                <p>
+                                    How easy was it to generate questions on the topics you wanted?<br>
+                                    (1 is very hard, 5 is very easy)
+                                </p>
+                                <input type="range" name="questionGenerationRatingSlider" min="1" max="5" value="" 
+                                        oninput="this.form.questionGenerationRatingNumber.value=this.value" required/>
+                                <input type="number" id="questionGenerationRating" name="questionGenerationRatingNumber" min="1" max="5" value="" 
+                                        oninput="this.form.questionGenerationRatingSlider.value=this.value" required/>
+                            </div>
+
+                            <div class="questionContainer">
+                                <p>
+                                    How would you rate the quality of the questions generated><br>
+                                    (1 is very low quality, 5 is very high quality)
+                                </p>
+                                <input type="range" name="generationQualityRatingSlider" min="1" max="5" value="" 
+                                        oninput="this.form.generationQualityRatingNumber.value=this.value" required/>
+                                <input type="number" id="generationQualityRating" name="generationQualityRatingNumber" min="1" max="5" value="" 
+                                        oninput="this.form.generationQualityRatingSlider.value=this.value" required/>
+                            </div>
+
+                            <div class="questionContainer">
+                                <p>Do you have any feedback on the questions generated?. (optional)</p>
+                                <textarea id="generationFeedback" rows="4" cols="55"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questionContainer">
+                        <p class="sliderQuestion">
+                            How would you rate the ease of navigation? (How easy it is to locate the resources you want)<br>
+                            (1 is very hard to navigate, 5 is very easy to navigate)
+                        </p>
+                        <input type="range" name="navRatingSlider" min="1" max="5" value="" 
+                                oninput="this.form.navRatingNumber.value=this.value" required/>
+                        <input type="number" id="navRating" name="navRatingNumber" min="1" max="5" value="" 
+                                oninput="this.form.navRatingSlider.value=this.value" required/>
+                    </div>
+
+                    <div class="questionContainer">
+                        <p class="sliderQuestion">
+                            How would you rate the user interface/appearance of the website?<br>
+                            (1 is very bad, 5 is very bad)
+                        </p>
+                        <input type="range" name="uiRatingSlider" min="1" max="5" value="" 
+                                oninput="this.form.uiRatingNumber.value=this.value" required/>
+                        <input type="number" id="uiRating" name="uiRatingNumber" min="1" max="5" value="" 
+                                oninput="this.form.uiRatingSlider.value=this.value" required/>
+                    </div>
+
+                    <div class="questionContainer">
+                        <p class="sliderQuestion">
+                            How would you rate the usefulness of the website?<br>
+                            (1 is not at all useful, 5 is very useful)
+                        </p>
+                        <input type="range" name="usefullnessRatingSlider" min="1" max="5" value="" 
+                                oninput="this.form.usefullnessRatingNumber.value=this.value" required/>
+                        <input type="number" id="usefullnessRating" name="usefullnessRatingNumber" min="1" max="5" value="" 
+                                oninput="this.form.usefullnessRatingSlider.value=this.value" required/>
+                    </div>
+
+                    <div class="questionContainer">
+                        <p>Have you encountered any bugs / errors? If so, please provide any details. (optional)</p>
+                        <textarea id="bugsInput" rows="4" cols="55"></textarea>
+                    </div>
+
+                    <div class="questionContainer">
+                        <p>Do you have any other feedback? (optional)</p>
+                        <textarea id="generalFeedbackInput" rows="4" cols="55"></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+        </main>
+
+        <iframe id="footer" src="footer.html"></iframe>
+        
+    </body>
+
+</html>
