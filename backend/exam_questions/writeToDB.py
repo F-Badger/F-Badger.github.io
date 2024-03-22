@@ -56,4 +56,4 @@ def getTopicIDs(topics, cursor):
         topicID = cursor.fetchone()[0]
         topicIDs.append(topicID)
 
-    return topicIDs
+    return topicIDs #return list of topic IDs
