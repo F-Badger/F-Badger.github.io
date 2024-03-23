@@ -21,7 +21,7 @@
         height: 160px;
     }
     main {
-        padding: 170px 0 0 40px;
+        padding: 170px 40px 0;
     }
     #topic-prompt {
         text-align: center;
